@@ -80,7 +80,7 @@ def pd():
     corP = c1 - c2
     corD = corP - zure1
     GacorD = corD * 1
-    GacorP = corP * -0.5
+    GacorP = corP * -0.3
     robot.drive(-160, GacorP)
 
     r= sensor.read('RGB')
@@ -158,26 +158,28 @@ def red1():
     Mrm.run_angle(200,100,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 141:
-        lm.run(400)
-        rm.run(400)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+    while lm.angle() >= -180:
+        lm.run(-200)
+        rm.run(200)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -290:
-        lm.run(-250)
-        rm.run(0)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -1253:
+    while lm.angle() >= -228:
+        lm.run(-200)
+        rm.run(-200)
+        print(lm.angle())
+    while lm.angle() >= -500:
         pd3()
+    while True:
+        pd3()
+        c1 = Lr.reflection()
+        c2 = Rr.reflection()
+        print(c1 + c2)
+        if c1 + c2 <= 95:
+            break
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -250:
+    while lm.angle() >= -200:
         lm.run(-200)
         rm.run(200)
     lm.reset_angle (0) 
@@ -201,12 +203,12 @@ def red1():
 
 ev3.speaker.beep()
 
-while lm.angle() >= -60:
-    lm.run(-200)
-    rm.run(-200)
+while lm.angle() >= -70:
+    lm.run(-100)
+    rm.run(-100)
 lm.reset_angle (0) 
 rm.reset_angle (0)
-rm.run_angle(-300,340,Stop.BRAKE)
+rm.run_angle(-150,320,Stop.BRAKE)
 lm.reset_angle (0) 
 rm.reset_angle (0)
 while lm.angle() >= -110:
@@ -486,5 +488,12 @@ while True:
         break
     else:
         break
+while lm.angle() >= -145:
+    lm.run(-200)
+    rm.run(-200)
+    print(lm.angle())
+lm.reset_angle (0) 
+rm.reset_angle (0)
+rm.run_angle(-200,349,Stop.BRAKE)
 
-#ココマデ
+#ココマ
