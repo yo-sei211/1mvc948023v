@@ -558,32 +558,38 @@ while True:
         red1()
         break
     else:
-        break
-while lm.angle() >= -155:
-    lm.run(-200)
-    rm.run(-200)
-    print(lm.angle())
-lm.reset_angle (0) 
-rm.reset_angle (0)
-rm.run_angle(-200,344,Stop.BRAKE)
-lm.reset_angle (0) 
-rm.reset_angle (0)
-while lm.angle() >= -165:
-    lm.run(-200)
-    rm.run(-200)
-lm.stop (Stop.BRAKE)
-rm.stop (Stop.BRAKE)
-while True:
-    r= sensor.read('RGB')
+        while lm.angle() >= -155:
+            lm.run(-200)
+            rm.run(-200)
+            print(lm.angle())
+        lm.reset_angle (0) 
+        rm.reset_angle (0)
+        rm.run_angle(-200,344,Stop.BRAKE)
+        lm.reset_angle (0) 
+        rm.reset_angle (0)
+        while lm.angle() >= -165:
+            lm.run(-200)
+            rm.run(-200)
+        lm.stop (Stop.BRAKE)
+        rm.stop (Stop.BRAKE)
+        lm.reset_angle (0) 
+        rm.reset_angle (0)
+        while True:
+            r= sensor.read('RGB')
 
-    # Print results
-    s = ("{0}".format(r))
-    numbers = [int(number) for number in s.strip('()').split(', ')]
-    num1, num2, num3, num4 = numbers
-    if num1 >= 10:
-        ev3.speaker.play_notes(['C4/4'],500)
-        red2()
-        break
-    else:
+            # Print results
+            s = ("{0}".format(r))
+            numbers = [int(number) for number in s.strip('()').split(', ')]
+            num1, num2, num3, num4 = numbers
+            if num1 >= 10:
+                ev3.speaker.play_notes(['C4/4'],500)
+                red2()
+                break
+            else:
+                lm.stop (Stop.BRAKE)
+                rm.stop (Stop.BRAKE)
+                while lm.angle() <= 280:
+                    lm.run(200)
+                    rm.run(-200)
         break
 #ココマ
