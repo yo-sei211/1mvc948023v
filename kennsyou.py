@@ -81,7 +81,7 @@ def pd():
     corD = corP - zure1
     GacorD = corD * 1
     GacorP = corP * -0.3
-    robot.drive(0, GacorP)
+    robot.drive(-150, GacorP)
 
     r= sensor.read('RGB')
 

@@ -21,4 +21,4 @@ while True:
     s = ("{0}".format(r))
     numbers = [int(number) for number in s.strip('()').split(', ')]
     num1, num2, num3, num4 = numbers
-    print(numbers)
+    print(s3)
