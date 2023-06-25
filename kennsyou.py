@@ -81,7 +81,7 @@ def pd():
     corD = corP - zure1
     GacorD = corD * 1
     GacorP = corP * -0.3
-    robot.drive(-150, GacorP)
+    robot.drive(0, GacorP)
 
     r= sensor.read('RGB')
 
@@ -94,7 +94,8 @@ while True:
     pd()
     c1 = Lr.reflection()
     c2 = Rr.reflection()
-    print(c1 + c2)
+    if print(c1 + c2) <= 95:
+        break
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
