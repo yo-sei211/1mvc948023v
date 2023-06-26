@@ -63,6 +63,8 @@ def bl():
     global bl7
     global bl8
 bl()
+bl2 = 1
+bl3 = 2
 def pd():
     global zure1
     global corP
@@ -415,9 +417,35 @@ def red3():
         rm.run(-500)
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
+def set1p():
+    print(lm.angle())
+def set2p():
+    print(lm.angle())
+def set3p():
+    print(lm.angle())
+def set4p():
+    print(lm.angle())
+def set5p():
+    print(lm.angle()) 
+def set6p():
+    print(lm.angle())
+def set7p():
+    print(lm.angle())
+def set8p():
+    print(lm.angle())
+def set9p():
+    print(lm.angle())
+def set10p():
+    print(lm.angle())
+def set11p():
+    print(lm.angle())
+def set12p():
+    print(lm.angle())
 
 ev3.speaker.beep()
 
+while True:
+    set1p()
 while lm.angle() >= -70:
     lm.run(-400)
     rm.run(-400)
@@ -830,4 +858,40 @@ while True:
     print(c1 + c2)
     if c1 + c2 <= 95:
         break
-
+while True:
+    if bl2 == 1 and bl3 == 2:
+        set1p()
+        break
+    elif bl2 == 1 and bl4 == 2:
+        set2p()
+        break
+    elif bl2 == 2 and bl3 == 1:
+        set3p()
+        break
+    elif bl2 == 2 and bl4 == 1:
+        set4p()
+        break
+    elif bl3 == 2 and bl4 == 1:
+        set5p()
+        break
+    elif bl3 == 1 and bl4 == 2:
+        set6p()
+        break
+    elif bl1 == 1 and bl2 == 2:
+        set7p()
+        break
+    elif bl1 == 1 and bl3 == 2:
+        set8p()
+        break
+    elif bl1 == 1 and bl4 == 2:
+        set9p()
+        break
+    elif bl1 == 2 and bl2 == 1:
+        set10p()
+        break
+    elif bl1 == 2 and bl3 == 1:
+        set11p()
+        break
+    elif bl1 == 2 and bl4 == 1:
+        set12p()
+        break
