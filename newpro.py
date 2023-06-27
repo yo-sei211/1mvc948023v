@@ -418,7 +418,109 @@ def red3():
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
 def set1p():
-    print(lm.angle())
+    while lm.angle() <= 137:
+        lm.run(200)
+        rm.run(200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 170:
+        lm.run(200)
+        rm.run(-200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -200:
+        lm.run(-200)
+        rm.run(-200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 280:
+        lm.run(200)
+        rm.run(-200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 119:
+        lm.run(200)
+        rm.run(200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -150:
+        lm.run(-200)
+        rm.run(200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 108:
+        lm.run(200)
+        rm.run(200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while Mrm.angle() >= -251:
+        Mrm.run(-100)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    Mrm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.reset_angle (0)
+    while lm.angle() <= 172:
+        lm.run(200)
+        rm.run(200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 340:
+        lm.run(200)
+        rm.run(-200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while Mlm.angle() >= -120:
+        Mlm.run(-100)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    Mlm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.reset_angle (0)
+    while True:
+        print(Mlm.angle())
 def set2p():
     print(lm.angle())
 def set3p():
@@ -666,7 +768,7 @@ while True:
     else:
         bl8 = 0
         break
-#色認識終わり。船出向
+#色認識終わり。
 lm.reset_angle (0) 
 rm.reset_angle (0)
 Mlm.reset_angle (0) 
@@ -725,7 +827,7 @@ rm.reset_angle (0)
 while lm.angle() >= -110:
     lm.run(-250)
     rm.run(250)
-#ここからグランドライン
+#ここから
 while lm.angle() >= -1100:
     pd()
 while lm.angle() >= -1350:
@@ -838,7 +940,7 @@ while True:
             break        
         break
     break
-#赤回収終了。ここから新世界
+#赤回収終了。
 lm.reset_angle (0) 
 rm.reset_angle (0)
 while lm.angle() <= 297:
