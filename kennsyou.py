@@ -93,6 +93,9 @@ def pd():
 ev3.speaker.beep()
 
 while True:
+    lm.run(600)
+    rm.run(-600)
+while True:
     pd()
     c1 = Lr.reflection()
     c2 = Rr.reflection()
