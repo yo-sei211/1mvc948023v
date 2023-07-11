@@ -3145,7 +3145,7 @@ def set6c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -250:
+    while lm.angle() >= -50:
         pd3()
     robot.stop(Stop.BRAKE)
     robot.stop(Stop.BRAKE)
@@ -3164,7 +3164,16 @@ def set6c():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 125:
+    while lm.angle() >= -190:
+        lm.run(-200)
+        rm.run(-200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 110:
         lm.run(200)
         rm.run(-200)
     lm.stop (Stop.BRAKE)
@@ -3198,7 +3207,7 @@ def set6c():
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mrm.reset_angle (0)
-    while lm.angle() >= -15:
+    while lm.angle() >= -5:
         lm.run(-200)
         rm.run(200)
     lm.stop (Stop.BRAKE)
@@ -3211,7 +3220,7 @@ def set6c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while Mlm.angle() >= -120:
+    while Mlm.angle() >= -260:
         Mlm.run(-100)
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
@@ -3277,19 +3286,6 @@ def set6c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -524:
-        lm.run(-200)
-        rm.run(-200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
     while lm.angle() >= -200:
         pd3()
     while True:
@@ -3305,7 +3301,7 @@ def set6c():
     lm.reset_angle (0) 
     rm.reset_angle (0)
 def set7c():
-    while lm.angle() <= 98:
+    while lm.angle() <= 68:
         lm.run(200)
         rm.run(200)
     lm.stop (Stop.BRAKE)
@@ -3323,7 +3319,7 @@ def set7c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -175:
+    while lm.angle() >= -130:
         lm.run(-200)
         rm.run(-200)
     lm.stop (Stop.BRAKE)
@@ -3332,7 +3328,7 @@ def set7c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while Mlm.angle() >= -120:
+    while Mlm.angle() >= -260:
         Mlm.run(-100)
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
@@ -3373,7 +3369,7 @@ def set7c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 150:
+    while lm.angle() <= 170:
         lm.run(200)
         rm.run(200)
     lm.stop (Stop.BRAKE)
@@ -3407,7 +3403,7 @@ def set7c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 171:
+    while lm.angle() <= 115:
         lm.run(200)
         rm.run(-200)
     lm.stop (Stop.BRAKE)
@@ -3461,9 +3457,18 @@ def set8c():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 300:
+    while lm.angle() <= 280:
         lm.run(200)
         rm.run(-200)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.stop (Stop.BRAKE)
+    rm.stop (Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 100:
+        lm.run(200)
+        rm.run(200)
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
     lm.stop (Stop.BRAKE)
@@ -3496,7 +3501,7 @@ def set8c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -63:
+    while lm.angle() >= -30:
         lm.run(-200)
         rm.run(-200)
     lm.stop (Stop.BRAKE)
@@ -3505,7 +3510,7 @@ def set8c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while Mlm.angle() >= -120:
+    while Mlm.angle() >= -260:
         Mlm.run(-100)
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
@@ -3519,7 +3524,7 @@ def set8c():
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mlm.reset_angle (0)
-    while lm.angle() <= 512:
+    while lm.angle() <= 460:
         lm.run(200)
         rm.run(200)
     lm.stop (Stop.BRAKE)
@@ -3555,7 +3560,7 @@ def set8c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 302:
+    while lm.angle() <= 317:
         lm.run(200)
         rm.run(200)
     lm.stop (Stop.BRAKE)
@@ -3580,7 +3585,7 @@ def set8c():
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mrm.reset_angle (0)
-    while lm.angle() <= 180:
+    while lm.angle() <= 140:
         lm.run(200)
         rm.run(-200)
     lm.stop (Stop.BRAKE)
@@ -3589,7 +3594,7 @@ def set8c():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -20:
+    while lm.angle() >= -100:
         pd3()
     while True:
         pd3()
@@ -4176,8 +4181,43 @@ def set12c():
 
 ev3.speaker.beep()
 
-while True:
-    set5c()
+Mlm.run_time(420,1000,Stop.BRAKE)
+while lm.angle() <= 528:
+    lm.run(400)
+    rm.run(400)
+lm.reset_angle (0) 
+rm.reset_angle (0)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+rm.run_angle(-500,300,Stop.BRAKE)
+while lm.angle() >= -442:
+    lm.run(-400)
+    rm.run(-400)
+lm.reset_angle (0) 
+rm.reset_angle (0)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+Mlm.run_time(-420,1000,Stop.BRAKE)
+while rm.angle() <= 40:
+    lm.run(-400)
+    rm.run(400)
+lm.reset_angle (0) 
+rm.reset_angle (0)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+while lm.angle() >= -654:
+    lm.run(-400)
+    rm.run(-400)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
 """
 while lm.angle() >= -25:
     lm.run(-400)
@@ -4652,7 +4692,7 @@ while True:
         set12p()
         break
     break
-Mlm.run_time(220,1000,Stop.BRAKE)
+Mlm.run_time(420,1000,Stop.BRAKE)
 while lm.angle() >= -80:
     lm.run(-400)
     rm.run(-400)
