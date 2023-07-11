@@ -92,7 +92,8 @@ def pd():
 
 ev3.speaker.beep()
 
-
+while True:
+    print(lm.time())
 while True:
     pd()
     c1 = Lr.reflection()
