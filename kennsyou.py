@@ -93,14 +93,11 @@ def pd():
 ev3.speaker.beep()
 
 while True:
-    print(lm.time())
+    rm.run(-260)
 while True:
-    pd()
     c1 = Lr.reflection()
     c2 = Rr.reflection()
     print (c1 + c2)
-    if c1 + c2 <= 65:
-        break
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
