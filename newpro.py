@@ -4211,6 +4211,8 @@ def set12c():
 
 ev3.speaker.beep()
 
+set11p()
+"""
 while lm.angle() >= -25:
     lm.run(-400)
     rm.run(-400)
@@ -4893,3 +4895,4 @@ lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
+"""

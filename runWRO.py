@@ -295,19 +295,24 @@ def red4():
     rm.stop (Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    lm.run_angle(-400,449,Stop.COAST)
+    lm.run_angle(-400,550,Stop.COAST)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -460:
+    while lm.angle() >= -175:
         lm.run(-400)
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -300:
+    while rm.angle() >= -100:
+        lm.run(0)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -150:
         pd3()
     robot.stop(Stop.BRAKE)
     while True:
-        pd2()
+        pd3()
         c1 = Lr.reflection()
         c2 = Rr.reflection()
         print(c1 + c2)
@@ -316,7 +321,7 @@ def red4():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -10:
+    while lm.angle() >= -30:
         lm.run(-350)
         rm.run(-350)
     lm.reset_angle (0) 
@@ -350,21 +355,26 @@ def red3():
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    rm.run_angle(-400,650,Stop.BRAKE)
+    rm.run_angle(-400,580,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -105:
+    while lm.angle() >= -180:
         lm.run(-400)
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -450:
+    while rm.angle() >= -70:
+        lm.run(0)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -250:
         pd3()
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while True:
-        pd2()
+        pd3()
         c1 = Lr.reflection()
         c2 = Rr.reflection()
         print(c1 + c2)
@@ -393,16 +403,16 @@ def red3():
     lm.stop (Stop.BRAKE)
     rm.stop (Stop.BRAKE)
 def set1p():
-    rm.run_angle(-400,135,Stop.BRAKE)
+    rm.run_angle(-350,135,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -320:
-        lm.run(-400)
-        rm.run(-400)
+    while lm.angle() >= -340:
+        lm.run(-350)
+        rm.run(-350)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mlm.run_angle(-400,140,Stop.BRAKE)
-    rm.run_angle(600,780,Stop.BRAKE)
+    rm.run_angle(600,810,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mrm.run_angle(-200,140,Stop.BRAKE)
@@ -423,7 +433,7 @@ def set1p():
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -220:
+    while lm.angle() >= -260:
         lm.run(-400)
         rm.run(-400)
     lm.reset_angle (0) 
@@ -446,12 +456,12 @@ def set1p():
     Mlm.reset_angle (0) 
     Mrm.reset_angle (0)
 def set2p():
-    rm.run_angle(-400,52,Stop.BRAKE)
+    rm.run_angle(-350,52,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -213:
-        lm.run(-400)
-        rm.run(-400)
+        lm.run(-350)
+        rm.run(-350)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mlm.run_angle(-200,140,Stop.BRAKE)
@@ -506,7 +516,7 @@ def set3p():
         rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 175:
+    while lm.angle() <= 180:
         lm.run(300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -518,49 +528,49 @@ def set3p():
     rm.reset_angle (0)
     Mlm.run_angle(-100,140,Stop.BRAKE)
     while lm.angle() <= 263:
-        lm.run(400)
-        rm.run(-400)
+        lm.run(300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 143:
-        lm.run(400)
-        rm.run(400)
+    while lm.angle() <= 180:
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -150:
-        lm.run(-400)
-        rm.run(400)
+    while lm.angle() >= -115:
+        lm.run(-300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 780:
-        lm.run(400)
-        rm.run(400)
+    while lm.angle() <= 720:
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mrm.run_angle(-100,140,Stop.BRAKE)
     while lm.angle() <= 100:
-        lm.run(400)
-        rm.run(400)
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -136:
-        lm.run(-400)
-        rm.run(400)
+    while lm.angle() <= 160:
+        lm.run(300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 285:
-        lm.run(400)
-        rm.run(400)
+    while lm.angle() >= -285:
+        lm.run(-300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 155:
-        lm.run(400)
-        rm.run(-400)
+    while lm.angle() >= -160:
+        lm.run(-300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -524:
-        lm.run(-400)
-        rm.run(-400)
+        lm.run(-300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -200:
@@ -589,7 +599,7 @@ def set4p():
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mrm.run_angle(-200,140,Stop.BRAKE)
-    while lm.angle() <= 175:
+    while lm.angle() <= 200:
         lm.run(300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -604,7 +614,7 @@ def set4p():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -190:
+    while lm.angle() >= -230:
         lm.run(-300)
         rm.run(300)
     lm.reset_angle (0) 
@@ -620,7 +630,7 @@ def set4p():
         rm.run(400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 150:
+    while lm.angle() <= 170:
         lm.run(400)
         rm.run(-400)
     lm.reset_angle (0) 
@@ -683,7 +693,11 @@ def set5p():
     Mlm.reset_angle (0) 
     Mrm.reset_angle (0)
 def set6p():
-    rm.run_angle(-400,281,Stop.BRAKE)
+    while rm.angle() >= -300:
+        lm.run(0)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -250:
@@ -710,24 +724,24 @@ def set6p():
     rm.reset_angle (0)
     Mrm.run_angle(-130,140,Stop.BRAKE)
     Mlm.run_angle(-130,140,Stop.BRAKE)
-    while lm.angle() <= 100:
-        lm.run(400)
-        rm.run(400)
+    while lm.angle() <= 160:
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() <= 156:
-        lm.run(400)
-        rm.run(-400)
+        lm.run(280)
+        rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -202:
-        lm.run(-400)
-        rm.run(-400)
+    while lm.angle() >= -262:
+        lm.run(-300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -135:
-        lm.run(-400)
-        rm.run(400)
+    while lm.angle() >= -130:
+        lm.run(-280)
+        rm.run(280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -524:
@@ -760,44 +774,44 @@ def set7p():
     rm.reset_angle (0)
     Mlm.run_angle(-150,150,Stop.BRAKE)
     while rm.angle() <= 60:
-        lm.run(400)
-        rm.run(400)
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while rm.angle() >= -180:
-        lm.run(400)
-        rm.run(-400)
+    while rm.angle() >= -140:
+        lm.run(280)
+        rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -285:
-        lm.run(-400)
-        rm.run(-400)
+    while lm.angle() >= -340:
+        lm.run(-300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -230:
-        lm.run(-400)
-        rm.run(400)
+    while lm.angle() >= -190:
+        lm.run(-280)
+        rm.run(280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() <= 200:
-        lm.run(400)
-        rm.run(400)
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-200,140,Stop.BRAKE)
-    while lm.angle() >= -152:
-        lm.run(-400)
-        rm.run(-400)
+    Mrm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() >= -140:
+        lm.run(-100)
+        rm.run(-100)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 180:
-        lm.run(400)
-        rm.run(400)
+    while lm.angle() <= 100:
+        lm.run(250)
+        rm.run(250)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() <= 170:
-        lm.run(400)
-        rm.run(-400)
+        lm.run(280)
+        rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -50:
@@ -813,7 +827,7 @@ def set7p():
     lm.reset_angle (0) 
     rm.reset_angle (0)
 def set8p():
-    while lm.angle() >= -300:
+    while lm.angle() >= -330:
         lm.run(-300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -823,7 +837,7 @@ def set8p():
         rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-200,140,Stop.BRAKE)
+    Mrm.run_angle(-100,140,Stop.BRAKE)
     while lm.angle() <= 175:
         lm.run(300)
         rm.run(-300)
@@ -839,7 +853,7 @@ def set8p():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -190:
+    while lm.angle() >= -195:
         lm.run(-300)
         rm.run(300)
     lm.reset_angle (0) 
@@ -875,12 +889,12 @@ def set8p():
     Mlm.reset_angle (0) 
     Mrm.reset_angle (0)
 def set9p():
-    while lm.angle() >= -232:
+    while lm.angle() >= -250:
         lm.run(-200)
         rm.run(-200)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 22:
+    while lm.angle() <= 60:
         lm.run(200)
         rm.run(-200)
     lm.reset_angle (0) 
@@ -897,7 +911,7 @@ def set9p():
     lm.reset_angle (0) 
     rm.reset_angle (0)
     Mlm.reset_angle (0)
-    while lm.angle() <= 270:
+    while lm.angle() <= 260:
         lm.run(200)
         rm.run(-200)
     lm.reset_angle (0) 
@@ -912,7 +926,7 @@ def set9p():
         rm.run(200)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-200,140,Stop.BRAKE)
+    Mrm.run_angle(-100,140,Stop.BRAKE)
     while lm.angle() <= 150:
         lm.run(200)
         rm.run(-200)
@@ -931,7 +945,9 @@ def set9p():
     lm.reset_angle (0) 
     rm.reset_angle (0)
 def set10p():
-    rm.run_angle(-400,360,Stop.BRAKE)
+    while rm.angle() >= -300:
+        lm.run(0)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -250:
@@ -977,18 +993,18 @@ def set10p():
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() <= 156:
-        lm.run(400)
-        rm.run(-400)
+        lm.run(280)
+        rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -202:
-        lm.run(-400)
-        rm.run(-400)
+    while lm.angle() >= -362:
+        lm.run(-240)
+        rm.run(-240)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -135:
-        lm.run(-400)
-        rm.run(400)
+    while lm.angle() >= -120:
+        lm.run(-280)
+        rm.run(280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -200:
@@ -1006,285 +1022,58 @@ def set10p():
     Mlm.reset_angle (0) 
     Mrm.reset_angle (0)
 def set11p():
-    rm.run_angle(-550,588,Stop.BRAKE)
+    while rm.angle() >= -300:
+        lm.run(0)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.run_angle(-150,140,Stop.BRAKE)
-    while lm.angle() <= 400:
-        lm.run(330)
-        rm.run(330)
+    while lm.angle() >= -250:
+        pd3()
+    while True:
+        pd3()
+        c1 = Lr.reflection()
+        c2 = Rr.reflection()
+        print (c1 + c2)
+        if c1 + c2 <= 60:
+            break
+    robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -140:
-        lm.run(-300)
+    while lm.angle() <= 115:
+        lm.run(300)
         rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-100,150,Stop.BRAKE)
-    while lm.angle() >= -50:
-        lm.run(-200)
-        rm.run(200)
+    while rm.angle() >= -320:
+        lm.run(0)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -240:
-        lm.run(-400)
-        rm.run(-400)
+    Mrm.run_angle(-200,130,Stop.BRAKE)
+    while rm.angle() <= 600:
+        lm.run(400)
+        rm.run(400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    rm.run_angle(-360,800,Stop.BRAKE)
+    Mlm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() <= 160:
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 30:
-        lm.run(240)
-        rm.run(240)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 340:
+    while lm.angle() <= 156:
         lm.run(280)
         rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 200:
-        lm.run(340)
-        rm.run(340)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 220:
-        lm.run(380)
-        rm.run(-380)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -170:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -300:
-        pd3()
-    while True:
-        pd3()
-        c1 = Lr.reflection()
-        c2 = Rr.reflection()
-        print(c1 + c2)
-        if c1 + c2 <= 65:
-            break
-    robot.stop(Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-def set12p():
-    while lm.angle() >= -300:
-        lm.run(-200)
-        rm.run(-200)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 140:
-        lm.run(200)
-        rm.run(-200)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mrm.run_angle(-100,150,Stop.BRAKE)
-    while lm.angle() <= 150:
-        lm.run(200)
-        rm.run(-200)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -138:
-        lm.run(-200)
-        rm.run(-200)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -280:
-        pd3()
-    robot.stop(Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -190:
-        lm.run(-200)
-        rm.run(200)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mlm.run_angle(-150,140,Stop.BRAKE)
-    while lm.angle() <= 150:
-        lm.run(200)
-        rm.run(-200)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -200:
-        pd3()
-    while True:
-        pd3()
-        c1 = Lr.reflection()
-        c2 = Rr.reflection()
-        print(c1 + c2)
-        if c1 + c2 <= 65:
-            break
-    robot.stop(Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-def set1c():
-    rm.run_angle(-400,135,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -320:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mlm.run_angle(-400,140,Stop.BRAKE)
-    rm.run_angle(600,780,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mrm.run_angle(-200,140,Stop.BRAKE)
-    lm.run_angle(-400,100,Stop.BRAKE)
-    while lm.angle() >= -320:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mrm.run_angle(400,140,Stop.BRAKE)
-    while lm.angle() <= 180:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 200:
-        lm.run(400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -220:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    lm.run_angle(-400,300,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -250:
-        pd3()
-    while True:
-        pd3()
-        c1 = Lr.reflection()
-        c2 = Rr.reflection()
-        print(c1 + c2)
-        if c1 + c2 <= 65:
-            break
-    robot.stop(Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mlm.reset_angle (0) 
-    Mrm.reset_angle (0)
-def set2c():
-    rm.run_angle(-400,52,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -213:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mlm.run_angle(-200,140,Stop.BRAKE)
-    rm.run_angle(700,820,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mrm.run_angle(-200,140,Stop.BRAKE)
-    lm.run_angle(-400,70,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -285:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mrm.run_angle(400,140,Stop.BRAKE)
-    while lm.angle() <= 170:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 200:
-        lm.run(400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -210:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    lm.run_angle(-400,260,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -250:
-        pd3()
-    while True:
-        pd3()
-        c1 = Lr.reflection()
-        c2 = Rr.reflection()
-        print(c1 + c2)
-        if c1 + c2 <= 65:
-            break
-    robot.stop(Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mlm.reset_angle (0) 
-    Mrm.reset_angle (0)
-def set3c():
-    while lm.angle() <= 120:
-        lm.run(300)
-        rm.run(300)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 175:
-        lm.run(300)
-        rm.run(-300)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -217:
+    while lm.angle() >= -262:
         lm.run(-300)
         rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.run_angle(-100,140,Stop.BRAKE)
-    while lm.angle() <= 263:
-        lm.run(400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 143:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
     while lm.angle() >= -150:
-        lm.run(-400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 780:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mrm.run_angle(-100,140,Stop.BRAKE)
-    while lm.angle() <= 100:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -136:
-        lm.run(-400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 285:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 155:
-        lm.run(400)
-        rm.run(-400)
+        lm.run(-280)
+        rm.run(280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -524:
@@ -1306,8 +1095,8 @@ def set3c():
     rm.reset_angle (0)
     Mlm.reset_angle (0) 
     Mrm.reset_angle (0)
-def set4c():
-    while lm.angle() >= -300:
+def set12p():
+    while lm.angle() >= -310:
         lm.run(-300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -1317,8 +1106,8 @@ def set4c():
         rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-200,140,Stop.BRAKE)
-    while lm.angle() <= 175:
+    Mrm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() <= 205:
         lm.run(300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -1333,23 +1122,13 @@ def set4c():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -190:
+    while lm.angle() >= -220:
         lm.run(-300)
         rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -160:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
     Mlm.run_angle(-100,140,Stop.BRAKE)
-    while lm.angle() <= 160:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 150:
+    while lm.angle() <= 120:
         lm.run(400)
         rm.run(-400)
     lm.reset_angle (0) 
@@ -1368,39 +1147,48 @@ def set4c():
     rm.reset_angle (0)
     Mlm.reset_angle (0) 
     Mrm.reset_angle (0)
-def set5c():
-    rm.run_angle(-400,135,Stop.BRAKE)
+def set1c():
+    rm.run_angle(-350,135,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
+    while lm.angle() >= -290:
+        lm.run(-350)
+        rm.run(-350)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.run_angle(-400,290,Stop.BRAKE)
+    rm.run_angle(600,810,Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.run_angle(-120,290,Stop.BRAKE)
     while lm.angle() >= -320:
-        lm.run(-400)
-        rm.run(-400)
+        lm.run(-200)
+        rm.run(-200)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.run_angle(-400,140,Stop.BRAKE)
-    lm.run_angle(400,107,Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 151:
+    while lm.angle() <= 180:
         lm.run(400)
         rm.run(400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-100,140,Stop.BRAKE)
-    while lm.angle() <= 270:
+    Mrm.run_angle(400,260,Stop.BRAKE)
+    while lm.angle() <= 160:
         lm.run(400)
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -100:
+    while lm.angle() >= -220:
         lm.run(-400)
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -200:
+    lm.run_angle(-400,300,Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -350:
         pd3()
     while True:
-        pd3()
+        pd2()
         c1 = Lr.reflection()
         c2 = Rr.reflection()
         print(c1 + c2)
@@ -1409,11 +1197,256 @@ def set5c():
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-def set6c():
-    rm.run_angle(-400,281,Stop.BRAKE)
+    Mlm.reset_angle (0) 
+    Mrm.reset_angle (0)
+def set2c():
+    rm.run_angle(-350,20,Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -250:
+    while lm.angle() >= -213:
+        lm.run(-350)
+        rm.run(-350)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.run_angle(-200,260,Stop.BRAKE)
+    while rm.angle() <= 640:
+        lm.run(0)
+        rm.run(700)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.run_angle(-200,260,Stop.BRAKE)
+    lm.run_angle(-400,70,Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -285:
+        lm.run(-400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.run_angle(400,260,Stop.BRAKE)
+    while lm.angle() <= 170:
+        lm.run(400)
+        rm.run(400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 200:
+        lm.run(400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -140:
+        lm.run(-400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    lm.run_angle(-400,290,Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -300:
+        pd3()
+    while True:
+        pd2()
+        c1 = Lr.reflection()
+        c2 = Rr.reflection()
+        print(c1 + c2)
+        if c1 + c2 <= 65:
+            break
+    robot.stop(Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.reset_angle (0) 
+    Mrm.reset_angle (0)
+def set3c():
+    while lm.angle() <= 100:
+        lm.run(300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 170:
+        lm.run(300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -200:
+        lm.run(-300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.run_angle(-100,260,Stop.BRAKE)
+    while lm.angle() <= 263:
+        lm.run(300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 110:
+        lm.run(300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -115:
+        lm.run(-300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 750:
+        lm.run(300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.run_angle(-100,260,Stop.BRAKE)
+    while lm.angle() <= 100:
+        lm.run(300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 160:
+        lm.run(300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -140:
+        lm.run(-300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -270:
+        lm.run(-300)
+        rm.run(0)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -200:
+        pd3()
+    while lm.angle() >= -600:
+        pd2()
+    while True:
+        pd2()
+        c1 = Lr.reflection()
+        c2 = Rr.reflection()
+        print(c1 + c2)
+        if c1 + c2 <= 65:
+            break
+    robot.stop(Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.reset_angle (0) 
+    Mrm.reset_angle (0)
+def set4c():
+    while lm.angle() >= -330:
+        lm.run(-300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 140:
+        lm.run(300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 60:
+        lm.run(300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.run_angle(-200,260,Stop.BRAKE)
+    while lm.angle() <= 120:
+        lm.run(300)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -370:
+        pd3()
+    robot.stop(Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -200:
+        lm.run(-300)
+        rm.run(300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -160:
+        lm.run(-400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.run_angle(-100,260,Stop.BRAKE)
+    while lm.angle() <= 160:
+        lm.run(400)
+        rm.run(400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 140:
+        lm.run(400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -290:
+        pd3()
+    while True:
+        pd2()
+        c1 = Lr.reflection()
+        c2 = Rr.reflection()
+        print(c1 + c2)
+        if c1 + c2 <= 65:
+            break
+    robot.stop(Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.reset_angle (0) 
+    Mrm.reset_angle (0)
+def set5c():
+    while rm.angle() >= -135:
+        lm.run(0)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -320:
+        lm.run(-400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.run_angle(-400,260,Stop.BRAKE)
+    while rm.angle() >= -160:
+        lm.run(0)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() <= 360:
+        lm.run(400)
+        rm.run(400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mrm.run_angle(-100,260,Stop.BRAKE)
+    while lm.angle() <= 110:
+        lm.run(400)
+        rm.run(-400)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -200:
+        pd3()
+    while lm.angle() >= -600:
+        pd2()
+    while True:
+        pd2()
+        c1 = Lr.reflection()
+        c2 = Rr.reflection()
+        print(c1 + c2)
+        if c1 + c2 <= 65:
+            break
+    robot.stop(Stop.BRAKE)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.reset_angle (0) 
+    Mrm.reset_angle (0)
+def set6c():
+    while rm.angle() >= -300:
+        lm.run(0)
+        rm.run(-300)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    while lm.angle() >= -100:
         pd3()
     while True:
         pd3()
@@ -1435,37 +1468,34 @@ def set6c():
         rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-130,140,Stop.BRAKE)
-    Mlm.run_angle(-130,140,Stop.BRAKE)
-    while lm.angle() <= 100:
-        lm.run(400)
-        rm.run(400)
+    Mrm.run_angle(-200,260,Stop.BRAKE)
+    Mlm.run_angle(-200,260,Stop.BRAKE)
+    while lm.angle() <= 160:
+        lm.run(300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() <= 156:
-        lm.run(400)
-        rm.run(-400)
+        lm.run(280)
+        rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -202:
-        lm.run(-400)
-        rm.run(-400)
+    while lm.angle() >= -310:
+        lm.run(-300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -135:
-        lm.run(-400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -524:
-        lm.run(-400)
-        rm.run(-400)
+    while lm.angle() >= -110:
+        lm.run(-280)
+        rm.run(280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -200:
         pd3()
+    while lm.angle() >= -800:
+        pd2()
     while True:
-        pd3()
+        pd2()
         c1 = Lr.reflection()
         c2 = Rr.reflection()
         print(c1 + c2)
@@ -1800,125 +1830,67 @@ def set11c():
     rm.reset_angle (0)
 def set12c():
     while lm.angle() >= -300:
-        pd3()
-    robot.stop(Stop.BRAKE)
-    robot.stop(Stop.BRAKE)
-    robot.stop(Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+        lm.run(-300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() <= 140:
-        lm.run(200)
-        rm.run(-200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+        lm.run(300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.reset_angle (0) 
-    Mrm.reset_angle (0)
-    while Mrm.angle() >= -251:
-        Mrm.run(-100)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
-    Mrm.stop (Stop.BRAKE)
+    Mrm.run_angle(-200,140,Stop.BRAKE)
+    while lm.angle() <= 175:
+        lm.run(300)
+        rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.reset_angle (0)
-    while lm.angle() <= 150:
-        lm.run(200)
-        rm.run(-200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() >= -138:
-        lm.run(-200)
-        rm.run(-200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+    while lm.angle() >= -100:
+        lm.run(-400)
+        rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -280:
         pd3()
     robot.stop(Stop.BRAKE)
-    robot.stop(Stop.BRAKE)
-    robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -190:
-        lm.run(-200)
-        rm.run(200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+        lm.run(-300)
+        rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() <= 20:
-        lm.run(200)
-        rm.run(200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+    while lm.angle() >= -160:
+        lm.run(-400)
+        rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.reset_angle (0) 
-    Mrm.reset_angle (0)
-    while Mlm.angle() >= -270:
-        Mlm.run(-100)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    Mlm.stop (Stop.BRAKE)
-    Mlm.stop (Stop.BRAKE)
-    Mlm.stop (Stop.BRAKE)
-    Mlm.stop (Stop.BRAKE)
-    Mlm.stop (Stop.BRAKE)
+    Mlm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() <= 160:
+        lm.run(400)
+        rm.run(400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.reset_angle (0)
     while lm.angle() <= 150:
-        lm.run(200)
-        rm.run(-200)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
-    lm.stop (Stop.BRAKE)
-    rm.stop (Stop.BRAKE)
+        lm.run(400)
+        rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
     while lm.angle() >= -200:
         pd3()
     while True:
-        pd2()
+        pd3()
         c1 = Lr.reflection()
         c2 = Rr.reflection()
         print(c1 + c2)
         if c1 + c2 <= 65:
             break
     robot.stop(Stop.BRAKE)
-    robot.stop(Stop.BRAKE)
-    robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
     rm.reset_angle (0)
+    Mlm.reset_angle (0) 
+    Mrm.reset_angle (0)
+set6c()
 
 ev3.speaker.beep()
 
@@ -2398,7 +2370,6 @@ while True:
         set12p()
         break
     break
-"""
 Mlm.run_time(420,1000,Stop.BRAKE)
 Mrm.run_time(420,1000,Stop.BRAKE)
 while lm.angle() >= -40:
@@ -2406,7 +2377,7 @@ while lm.angle() >= -40:
     rm.run(-400)
 lm.reset_angle (0) 
 rm.reset_angle (0)
-while lm.angle() <= 140:
+while lm.angle() <= 120:
     lm.run(400)
     rm.run(-400)
 lm.reset_angle (0) 
@@ -2419,21 +2390,34 @@ lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 Mlm.reset_angle (0) 
 Mrm.reset_angle (0)
-while lm.angle() >= -440:
-    pd()
+while lm.angle() >= -200:
+    pd3()
 robot.stop(Stop.BRAKE)
-robot.stop(Stop.BRAKE)
-robot.stop(Stop.BRAKE)
+while True:
+    lm.run(-300)
+    rm.run(-300)
+    c1 = Lr.reflection()
+    c2 = Rr.reflection()
+    print(c1 + c2)
+    if c1 + c2 <= 20:
+        break
 lm.reset_angle (0) 
 rm.reset_angle (0)
+while lm.angle() <= 50:
+    lm.run(200)
+    rm.run(200)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 Mrm.run_angle(-200,140,Stop.BRAKE)
+lm.reset_angle (0) 
+rm.reset_angle (0)
 Mlm.reset_angle (0) 
 Mrm.reset_angle (0)
-lm.run_angle(490,295,Stop.BRAKE)
+lm.run_angle(490,340,Stop.BRAKE)
 while lm.angle() >= -1200:
     pd2()
 robot.stop(Stop.BRAKE)
@@ -2441,7 +2425,7 @@ robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
 lm.reset_angle (0) 
 rm.reset_angle (0)
-while lm.angle() >= -380:
+while lm.angle() >= -440:
     lm.run(-400)
     rm.run(400)
 lm.reset_angle (0) 
@@ -2449,7 +2433,7 @@ rm.reset_angle (0)
 while lm.angle() >= -200:
     pd3()
 while True:
-    pd2()
+    pd3()
     c1 = Lr.reflection()
     c2 = Rr.reflection()
     print(c1 + c2)
@@ -2535,3 +2519,4 @@ lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
+"""
