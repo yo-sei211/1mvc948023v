@@ -84,20 +84,52 @@ def pd():
     robot.drive(-100, GacorP)
 
     r= sensor.read('RGB')
+    print(R2r.color())
+    # Print results
+    s = ("{0}".format(r))
+    numbers = [int(number) for number in s.strip('()').split(', ')]
+    num1, num2, num3, num4 = numbers
+def pd4():
+    global zure1
+    global corP
+    global clrD
+    global GacorP
+    global GacorD
+    global num1
+    global num2
+    global num3
+    global num4
+    c1 = Lr.reflection()
+    c2 = Rr.reflection()
+    s3 = R2r.color() 
+    zure1 = corP
+    corP = c1 - c2
+    corD = corP - zure1
+    GacorD = corD * 5
+    GacorP = corP * -0.5
+    robot.drive(100, 0)
+
+    r= sensor.read('RGB')
 
     # Print results
     s = ("{0}".format(r))
     numbers = [int(number) for number in s.strip('()').split(', ')]
     num1, num2, num3, num4 = numbers
+    print(s3)
 
 ev3.speaker.beep()
 
 while True:
-    rm.run(-600)
+    Mlm.run(400)
+    Mrm.run(400)
+    if Mlm.stalled() == True:
+        break
+"""
 while True:
     c1 = Lr.reflection()
     c2 = Rr.reflection()
     print (c1 + c2)
+"""
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)

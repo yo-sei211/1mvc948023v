@@ -21,4 +21,10 @@ while True:
     s = ("{0}".format(r))
     numbers = [int(number) for number in s.strip('()').split(', ')]
     num1, num2, num3, num4 = numbers
-    print(numbers)
+    sumnum = num1 + num2 + num3 + num4
+    if sumnum >= 100 and sumnum <= 500:
+        print("black")
+    elif sumnum >= 700:
+        print("white")
+    else:
+        print("air")
