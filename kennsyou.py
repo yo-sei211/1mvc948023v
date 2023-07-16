@@ -120,16 +120,11 @@ def pd4():
 ev3.speaker.beep()
 
 while True:
-    Mlm.run(400)
-    Mrm.run(400)
-    if Mlm.stalled() == True:
-        break
-"""
+    print(R2r.color())
 while True:
     c1 = Lr.reflection()
     c2 = Rr.reflection()
     print (c1 + c2)
-"""
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
 robot.stop(Stop.BRAKE)
