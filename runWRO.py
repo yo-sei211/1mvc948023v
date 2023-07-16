@@ -2523,7 +2523,7 @@ while True:
         set12c()
         break
     break
-"""
+
 while True:
     Mlm.run(400)
     Mrm.run(400)
@@ -2531,7 +2531,7 @@ while True:
         break
 Mlm.stop (Stop.BRAKE)
 Mrm.stop (Stop.BRAKE)
-while lm.angle() <= 528:
+while lm.angle() <= 518:
     lm.run(400)
     rm.run(400)
 lm.reset_angle (0) 
@@ -2547,7 +2547,7 @@ lm.reset_angle (0)
 rm.reset_angle (0)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
-while lm.angle() >= -430:
+while lm.angle() >= -440:
     lm.run(-400)
     rm.run(-400)
 lm.reset_angle (0) 
@@ -2579,3 +2579,4 @@ lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
+"""
