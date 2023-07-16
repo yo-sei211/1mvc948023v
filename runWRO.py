@@ -2531,16 +2531,23 @@ while True:
         break
 Mlm.stop (Stop.BRAKE)
 Mrm.stop (Stop.BRAKE)
-while True:
-    print(lm.angle())
-while lm.angle() <= 175:
+while lm.angle() <= 528:
     lm.run(400)
-    rm.run(-400)
+    rm.run(400)
 lm.reset_angle (0) 
 rm.reset_angle (0)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
-while lm.angle() >= -432:
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+while rm.angle() >= -210:
+    lm.run(0)
+    rm.run(-500)
+lm.reset_angle (0) 
+rm.reset_angle (0)
+lm.stop (Stop.BRAKE)
+rm.stop (Stop.BRAKE)
+while lm.angle() >= -430:
     lm.run(-400)
     rm.run(-400)
 lm.reset_angle (0) 
