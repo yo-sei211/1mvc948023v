@@ -827,7 +827,7 @@ def set7p():
     lm.reset_angle (0) 
     rm.reset_angle (0)
 def set8p():
-    while lm.angle() >= -330:
+    while lm.angle() >= -520:
         lm.run(-300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -837,7 +837,17 @@ def set8p():
         rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() >= -160:
+        lm.run(-280)
+        rm.run(-280)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
+    Mlm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() <= 200:
+        lm.run(280)
+        rm.run(280)
+    lm.reset_angle (0) 
+    rm.reset_angle (0)
     while lm.angle() <= 175:
         lm.run(300)
         rm.run(-300)
@@ -848,7 +858,7 @@ def set8p():
         rm.run(-400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -280:
+    while lm.angle() >= -700:
         pd3()
     robot.stop(Stop.BRAKE)
     lm.reset_angle (0) 
@@ -858,18 +868,8 @@ def set8p():
         rm.run(300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -160:
-        lm.run(-400)
-        rm.run(-400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    Mlm.run_angle(-100,140,Stop.BRAKE)
-    while lm.angle() <= 160:
-        lm.run(400)
-        rm.run(400)
-    lm.reset_angle (0) 
-    rm.reset_angle (0)
-    while lm.angle() <= 150:
+    Mrm.run_angle(-100,140,Stop.BRAKE)
+    while lm.angle() <= 110:
         lm.run(400)
         rm.run(-400)
     lm.reset_angle (0) 
@@ -1049,13 +1049,14 @@ def set11p():
         rm.run(-300)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mrm.run_angle(-200,130,Stop.BRAKE)
-    while rm.angle() <= 600:
+    Mlm.run_angle(-200,130,Stop.BRAKE)
+    while rm.angle() <= 680:
         lm.run(400)
         rm.run(400)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    Mlm.run_angle(-100,140,Stop.BRAKE)
+    Mrm.run_angle(-150,40,Stop.BRAKE)
+    Mrm.run_angle(-100,100,Stop.BRAKE)
     while lm.angle() <= 160:
         lm.run(300)
         rm.run(300)
@@ -1066,7 +1067,7 @@ def set11p():
         rm.run(-280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -262:
+    while lm.angle() >= -280:
         lm.run(-300)
         rm.run(-300)
     lm.reset_angle (0) 
@@ -1076,7 +1077,7 @@ def set11p():
         rm.run(280)
     lm.reset_angle (0) 
     rm.reset_angle (0)
-    while lm.angle() >= -524:
+    while lm.angle() >= -544:
         lm.run(-400)
         rm.run(-400)
     lm.reset_angle (0) 
@@ -1921,7 +1922,7 @@ def set12c():
     Mrm.reset_angle (0)
 
 ev3.speaker.beep()
-"""
+
 while lm.angle() >= -25:
     lm.run(-400)
     rm.run(-400)
@@ -2579,4 +2580,3 @@ lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
 lm.stop (Stop.BRAKE)
 rm.stop (Stop.BRAKE)
-"""
